@@ -124,7 +124,7 @@ const JoinFieldComponent: JoinFieldClientComponent = (props) => {
   const {
     field,
     field: {
-      admin: { allowCreate, description },
+      admin: { allowCreate, className, description },
       collection,
       label,
       localized,
@@ -197,7 +197,7 @@ const JoinFieldComponent: JoinFieldClientComponent = (props) => {
 
   return (
     <div
-      className={[fieldBaseClass, showError && 'error', 'join'].filter(Boolean).join(' ')}
+      className={[fieldBaseClass, className, showError && 'error', 'join'].filter(Boolean).join(' ')}
       id={`field-${path?.replace(/\./g, '__')}`}
     >
       <RenderCustomComponent
